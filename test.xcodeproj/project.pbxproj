@@ -15,6 +15,7 @@
 		00B59870239BB49E0075CEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5986E239BB49E0075CEE2 /* LaunchScreen.storyboard */; };
 		00B59878239C06660075CEE2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B59877239C06660075CEE2 /* data.json */; };
 		00B5987A239C06BB0075CEE2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B59879239C06BB0075CEE2 /* DataManager.swift */; };
+		00DF798D239C0FFD001451C9 /* UIColor+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DF798C239C0FFD001451C9 /* UIColor+Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		00B59871239BB49E0075CEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00B59877239C06660075CEE2 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		00B59879239C06BB0075CEE2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		00DF798C239C0FFD001451C9 /* UIColor+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Test.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				00B59865239BB49C0075CEE2 /* SceneDelegate.swift */,
 				00B59867239BB49C0075CEE2 /* ViewController.swift */,
 				00B59879239C06BB0075CEE2 /* DataManager.swift */,
+				00DF798C239C0FFD001451C9 /* UIColor+Test.swift */,
 				00B59869239BB49C0075CEE2 /* Main.storyboard */,
 				00B5986C239BB49E0075CEE2 /* Assets.xcassets */,
 				00B5986E239BB49E0075CEE2 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				00B59868239BB49C0075CEE2 /* ViewController.swift in Sources */,
 				00B5987A239C06BB0075CEE2 /* DataManager.swift in Sources */,
+				00DF798D239C0FFD001451C9 /* UIColor+Test.swift in Sources */,
 				00B59864239BB49C0075CEE2 /* AppDelegate.swift in Sources */,
 				00B59866239BB49C0075CEE2 /* SceneDelegate.swift in Sources */,
 			);

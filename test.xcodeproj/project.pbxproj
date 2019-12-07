@@ -13,7 +13,7 @@
 		00B5986B239BB49C0075CEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B59869239BB49C0075CEE2 /* Main.storyboard */; };
 		00B5986D239BB49E0075CEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B5986C239BB49E0075CEE2 /* Assets.xcassets */; };
 		00B59870239BB49E0075CEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5986E239BB49E0075CEE2 /* LaunchScreen.storyboard */; };
-		00B59878239C06660075CEE2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 00B59877239C06660075CEE2 /* data */; };
+		00B59878239C06660075CEE2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B59877239C06660075CEE2 /* data.json */; };
 		00B5987A239C06BB0075CEE2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B59879239C06BB0075CEE2 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		00B5986C239BB49E0075CEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00B5986F239BB49E0075CEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00B59871239BB49E0075CEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00B59877239C06660075CEE2 /* data */ = {isa = PBXFileReference; lastKnownFileType = text; path = data; sourceTree = "<group>"; };
+		00B59877239C06660075CEE2 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		00B59879239C06BB0075CEE2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 				00B5986C239BB49E0075CEE2 /* Assets.xcassets */,
 				00B5986E239BB49E0075CEE2 /* LaunchScreen.storyboard */,
 				00B59871239BB49E0075CEE2 /* Info.plist */,
-				00B59877239C06660075CEE2 /* data */,
+				00B59877239C06660075CEE2 /* data.json */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			files = (
 				00B59870239BB49E0075CEE2 /* LaunchScreen.storyboard in Resources */,
 				00B5986D239BB49E0075CEE2 /* Assets.xcassets in Resources */,
-				00B59878239C06660075CEE2 /* data in Resources */,
+				00B59878239C06660075CEE2 /* data.json in Resources */,
 				00B5986B239BB49C0075CEE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

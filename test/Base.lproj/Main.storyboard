@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-s8-riK">
-                                <rect key="frame" x="157" y="480.66666666666669" width="100" height="21"/>
+                                <rect key="frame" x="157" y="472.66666666666669" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="KAX-rF-zji"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                             <constraint firstItem="95r-UG-gMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ado-WF-mfr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IFs-Ww-9fD" secondAttribute="bottom" constant="20" id="iBo-2w-WRs"/>
                             <constraint firstItem="T2B-nB-Edb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcL-FU-Zzp"/>
-                            <constraint firstItem="DMB-s8-riK" firstAttribute="top" secondItem="T2B-nB-Edb" secondAttribute="bottom" constant="10" id="w2G-Yb-xkx"/>
+                            <constraint firstItem="DMB-s8-riK" firstAttribute="top" secondItem="T2B-nB-Edb" secondAttribute="bottom" constant="2" id="w2G-Yb-xkx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

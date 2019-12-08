@@ -78,9 +78,26 @@ class DataManager {
     private let fileType = "json"
 
     private(set) var states: [State] = []
-
+    private(set) var breatheStatesDuration: TimeInterval = 0.0
+    
     init() {
         self.loadData()
+        self.breatheStatesDuration = self.states.reduce(0.0) { (result, state) -> TimeInterval in
+            if self.isBreatheState(state) {
+                return result + state.duration
+            } else {
+                return result
+            }
+        }
+    }
+
+    func isBreatheState(_ state : State) -> Bool {
+        switch state.type {
+        case .inhale, .exhale, .hold:
+            return true
+        default:
+            return false
+        }
     }
 
     private func loadData() {

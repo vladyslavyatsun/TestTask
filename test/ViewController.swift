@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet var scaleView: UIView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var localTimerLabel: UILabel!
+    @IBOutlet var globalTimerLabel: UILabel!
+
+    private var timer: Timer?
+    private var localTimeValue: Int = 0
+    private var globalTimeValue: Int = 0
 
     private let dataManager = DataManager()
     private lazy var operationQueue: OperationQueue = {
@@ -32,6 +38,7 @@ class ViewController: UIViewController {
                 return ShowStateOperation(state: $0, viewController: self)
             }
             self.operationQueue.addOperations(operations, waitUntilFinished: false)
+            self.globalTimeValue = Int(self.dataManager.breatheStatesDuration)
         }
     }
 
@@ -41,6 +48,7 @@ class ViewController: UIViewController {
         switch newState.type {
         case .default:
             self.titleLabel.text = ""
+            self.endTimer()
             self.scale(to: newState.type.scaleValue!, duration: newState.duration) {
                 self.titleLabel.text = newState.type.title
                 completion()
@@ -52,6 +60,12 @@ class ViewController: UIViewController {
             self.titleLabel.text = newState.type.title
             DispatchQueue.main.asyncAfter(wallDeadline: .now() + newState.duration, execute: completion)
         }
+
+        self.localTimeValue = Int(newState.duration)
+        if self.timer == nil && self.dataManager.isBreatheState(newState) {
+            self.startTimer()
+            self.updateTimerLables()
+        }
     }
 
     fileprivate func scale(to value: CGFloat, duration: TimeInterval, completion: @escaping () -> Void) {
@@ -60,6 +74,42 @@ class ViewController: UIViewController {
         }, completion: { _ in
             completion()
         })
+    }
+
+}
+
+extension ViewController {
+
+    private func startTimer() {
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+    }
+
+    @objc private func updateTime() {
+        if self.localTimeValue > 0 {
+            self.localTimeValue -= 1
+        }
+        if self.globalTimeValue > 0 {
+            self.globalTimeValue -= 1
+        }
+        self.updateTimerLables()
+    }
+
+    private func updateTimerLables() {
+        self.localTimerLabel.text = "\(self.timeFormatted(self.localTimeValue))"
+        self.globalTimerLabel.text = "Remaining\n\(self.timeFormatted(self.globalTimeValue))"
+    }
+
+    private func endTimer() {
+        self.localTimerLabel.text = ""
+        self.globalTimerLabel.text = ""
+        self.timer?.invalidate()
+        self.timer = nil
+    }
+
+    private func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds = totalSeconds % 60
+        let minutes = (totalSeconds / 60) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 
 }

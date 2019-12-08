@@ -33,17 +33,43 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-s8-riK">
+                                <rect key="frame" x="157" y="480.66666666666669" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KAX-rF-zji"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-Ww-9fD">
+                                <rect key="frame" x="157" y="797" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WDM-kO-89d"/>
+                                    <constraint firstAttribute="height" constant="45" id="s5d-tB-zuz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="DMB-s8-riK" firstAttribute="leading" secondItem="T2B-nB-Edb" secondAttribute="leading" id="4hN-iq-NpE"/>
+                            <constraint firstItem="IFs-Ww-9fD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="73p-wH-vZF"/>
                             <constraint firstItem="95r-UG-gMy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MnG-XE-mgg"/>
                             <constraint firstItem="T2B-nB-Edb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NQb-9L-5ru"/>
+                            <constraint firstItem="DMB-s8-riK" firstAttribute="trailing" secondItem="T2B-nB-Edb" secondAttribute="trailing" id="Ss1-DD-lQ8"/>
                             <constraint firstItem="95r-UG-gMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ado-WF-mfr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IFs-Ww-9fD" secondAttribute="bottom" constant="20" id="iBo-2w-WRs"/>
                             <constraint firstItem="T2B-nB-Edb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcL-FU-Zzp"/>
+                            <constraint firstItem="DMB-s8-riK" firstAttribute="top" secondItem="T2B-nB-Edb" secondAttribute="bottom" constant="10" id="w2G-Yb-xkx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="globalTimerLabel" destination="IFs-Ww-9fD" id="yps-5B-MIe"/>
+                        <outlet property="localTimerLabel" destination="DMB-s8-riK" id="B5L-YQ-cHg"/>
                         <outlet property="scaleView" destination="95r-UG-gMy" id="SAm-rY-kux"/>
                         <outlet property="titleLabel" destination="T2B-nB-Edb" id="TAU-hi-zuj"/>
                     </connections>

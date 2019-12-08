@@ -63,11 +63,11 @@ struct State: Decodable {
         self.duration = duration
     }
 
-    fileprivate static var `default`: State {
+    static var `default`: State {
         return State(type: .default, color: .red, duration: 1)
     }
 
-    fileprivate static var initial: State {
+    static var initial: State {
         return State(type: .initial, color: .yellow, duration: 1)
     }
 }

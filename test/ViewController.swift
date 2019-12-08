@@ -28,6 +28,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
+    }
+
+    private func setup() {
+        let defaultState = State.default
+        self.titleLabel.text = defaultState.type.title
+        self.scaleView.backgroundColor = defaultState.color
+        self.scaleView.layer.borderWidth = 1.0
+        self.scaleView.layer.borderColor = UIColor.black.cgColor
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.start(_:)))
         self.scaleView.addGestureRecognizer(gesture)
     }
